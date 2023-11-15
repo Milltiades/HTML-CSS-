@@ -150,6 +150,14 @@ body {
   color: var(--clr-primary-400);
 }
 
+p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+}
+p[data-width= "wide"] {
+  max-width: 42ch;
+}
+
 /* button */
 
 .button {
@@ -264,6 +272,11 @@ body {
     display: none;
   }
 }
+
+:where(.flow :not(:first-child)) {
+   margin-top: var(--flow-spacer, 3em);
+}
+
 
 
 
